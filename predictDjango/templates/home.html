@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Predict</title>
+  </head>
+  <body>
+    <h1>Predict</h1>
+    <form method="GET">
+      {% csrf_token %}
+      <input type="text" name="input" placeholder="Type number" value={{request.GET.input}}>
+      <input type="submit" value="Press">
+    </form>
+    {% if answer %}
+        <h2>answer is : {{answer}}</h2>
+    {% endif %}
+
+  </body>
+</html>
